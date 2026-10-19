@@ -1,0 +1,101 @@
+{
+  "model": "LogisticRegression(class_weight='balanced') in sklearn Pipeline",
+  "trained_on": "1,800 customers, snapshot 2026-08-01",
+  "trained_date": "2026-10-19",
+  "decision_threshold": 0.5728,
+  "cv_roc_auc": 0.752,
+  "cv_pr_auc": 0.422,
+  "test_roc_auc": 0.763,
+  "test_pr_auc": 0.413,
+  "excluded_columns": [
+    "customer_id",
+    "snapshot_date",
+    "signup_date",
+    "days_until_churn",
+    "retention_offer_sent",
+    "age"
+  ],
+  "input_schema": {
+    "numeric": {
+      "tenure_months": {
+        "dtype": "float",
+        "min": 10.0,
+        "max": 78.0
+      },
+      "monthly_fee": {
+        "dtype": "float",
+        "min": 99.0,
+        "max": 823.43
+      },
+      "discount_percent": {
+        "dtype": "float",
+        "min": 0.0,
+        "max": 45.0
+      },
+      "support_tickets_90d": {
+        "dtype": "float",
+        "min": 0.0,
+        "max": 9.0
+      },
+      "late_payments_12m": {
+        "dtype": "float",
+        "min": 0.0,
+        "max": 6.0
+      },
+      "login_days_30d": {
+        "dtype": "float",
+        "min": 0.0,
+        "max": 30.0
+      },
+      "avg_session_minutes": {
+        "dtype": "float",
+        "min": 1.0,
+        "max": 47.2
+      },
+      "feature_usage_score": {
+        "dtype": "float",
+        "min": 1.6,
+        "max": 100.0
+      },
+      "nps_score": {
+        "dtype": "float",
+        "min": 1.5,
+        "max": 10.0
+      }
+    },
+    "categorical": {
+      "region": [
+        "east",
+        "north",
+        "south",
+        "stockholm",
+        "west"
+      ],
+      "contract_type": [
+        "annual",
+        "monthly",
+        "two_year"
+      ],
+      "payment_method": [
+        "autogiro",
+        "card",
+        "invoice",
+        "swish"
+      ],
+      "acquisition_channel": [
+        "organic",
+        "paid_search",
+        "partner",
+        "referral",
+        "social"
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.13.7",
+    "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.5.4"
+  }
+}
